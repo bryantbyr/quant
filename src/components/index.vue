@@ -10,7 +10,9 @@
               class="el-menu-vertical-demo"
               background-color="#545c64"
               text-color="#fff"
-              active-text-color="#ffd04b">
+              active-text-color="#ffd04b"
+              @select="panelChange"
+            >
               <el-menu-item index="1">
                 <i class="el-icon-menu"></i>
                 <span slot="title">因子库</span>
@@ -21,13 +23,17 @@
               </el-menu-item>
               <el-menu-item index="3">
                 <i class="el-icon-menu"></i>
-                <span slot="title">模型管理</span>
+                <span slot="title">股票行情</span>
               </el-menu-item>
               <el-menu-item index="4">
                 <i class="el-icon-menu"></i>
-                <span slot="title">选股回测</span>
+                <span slot="title">模型管理</span>
               </el-menu-item>
               <el-menu-item index="5">
+                <i class="el-icon-menu"></i>
+                <span slot="title">选股回测</span>
+              </el-menu-item>
+              <el-menu-item index="6">
                 <i class="el-icon-menu"></i>
                 <span slot="title">实战模拟</span>
               </el-menu-item>
@@ -36,7 +42,8 @@
         </el-row>
       </div>
       <div class="main-content">
-        <CompFactor></CompFactor>
+        <CompFactor v-if="panelIndex === 1"></CompFactor>
+        <CompStock v-if="panelIndex === 3"></CompStock>
       </div>
     </div>
   </div>
@@ -45,9 +52,21 @@
 <script>
 import PageHeader from './page_header'
 import CompFactor from './compFactor'
+import CompStock from './compStock'
 export default {
   name: 'index',
-  components: {CompFactor, PageHeader}
+  components: {CompStock, CompFactor, PageHeader},
+  data () {
+    return {
+      panelIndex: 1
+    }
+  },
+  methods: {
+    panelChange (ind) {
+      this.panelIndex = parseInt(ind)
+      console.log(this.panelIndex)
+    }
+  }
 }
 </script>
 
