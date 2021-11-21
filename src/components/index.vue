@@ -44,6 +44,8 @@
       <div class="main-content">
         <CompFactor v-if="panelIndex === 1"></CompFactor>
         <CompStock v-if="panelIndex === 3"></CompStock>
+        <CompBackTest v-if="panelIndex === 5"></CompBackTest>
+        <CompRealTrade v-if="panelIndex === 6"></CompRealTrade>
       </div>
     </div>
   </div>
@@ -53,9 +55,11 @@
 import PageHeader from './page_header'
 import CompFactor from './compFactor'
 import CompStock from './compStock'
+import CompBackTest from './compBacktest'
+import CompRealTrade from './compRealTrade'
 export default {
   name: 'index',
-  components: {CompStock, CompFactor, PageHeader},
+  components: {CompRealTrade, CompBackTest, CompStock, CompFactor, PageHeader},
   data () {
     return {
       panelIndex: 1
