@@ -5,6 +5,7 @@ import factors from '../components/factors'
 import Index from '../components/index'
 import Login from '../components/login'
 import Signin from '../components/signin'
+import UserAdmin from '../components/userAdmin'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/signin',
       name: 'signin',
       component: Signin
+    },
+    {
+      path: '/userAdmin',
+      name: 'userAdmin',
+      component: UserAdmin
     }
   ]
 })

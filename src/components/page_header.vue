@@ -3,12 +3,18 @@
       <div class="title">
         智能量化投资系统
       </div>
-      <div class="login-button" v-if="accountName === '' || accountName === null" @click="loginHandle" >
+      <div class="login-button" @click="loginHandle" v-if="accountName === '' || accountName === null">
         登录
       </div>
-      <div class="login-button" v-else @click="loginLogout" >
-        {{accountName}}
-      </div>
+      <el-dropdown class="login-button" @command="handleCommand" v-else>
+        <div >
+          {{accountName}}
+        </div>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="a" icon="el-icon-user">用户管理</el-dropdown-item>
+          <el-dropdown-item command="b" icon="el-icon-switch-button">退出</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
     </div>
 </template>
 
@@ -30,6 +36,16 @@ export default {
     loginLogout () {
       localStorage.removeItem('user')
       location.reload()
+    },
+    handleCommand (cmd) {
+      if (cmd === 'a') {
+        this.userAdmin()
+        return
+      }
+      this.loginLogout()
+    },
+    userAdmin () {
+      window.location.href = '/#/userAdmin'
     }
   }
 }

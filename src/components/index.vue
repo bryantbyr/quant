@@ -43,7 +43,9 @@
       </div>
       <div class="main-content">
         <CompFactor v-if="panelIndex === 1"></CompFactor>
+        <CompNews v-if="panelIndex === 2"></CompNews>
         <CompStock v-if="panelIndex === 3"></CompStock>
+        <CompModel v-if="panelIndex === 4"></CompModel>
         <CompBackTest v-if="panelIndex === 5"></CompBackTest>
         <CompRealTrade v-if="panelIndex === 6"></CompRealTrade>
       </div>
@@ -57,9 +59,11 @@ import CompFactor from './compFactor'
 import CompStock from './compStock'
 import CompBackTest from './compBacktest'
 import CompRealTrade from './compRealTrade'
+import CompModel from './compModel'
+import CompNews from './compNews'
 export default {
   name: 'index',
-  components: {CompRealTrade, CompBackTest, CompStock, CompFactor, PageHeader},
+  components: {CompNews, CompModel, CompRealTrade, CompBackTest, CompStock, CompFactor, PageHeader},
   data () {
     return {
       panelIndex: 1
@@ -78,12 +82,6 @@ export default {
   #index{
     margin: 0 0!important;
   }
-  .header{
-    height: 50px;
-    width: 100%;
-    background: cornflowerblue;
-    position:relative;
-  }
   .content{
     display: flex;
 
@@ -98,15 +96,5 @@ export default {
   }
   .main-content{
     padding: 30px;
-  }
-  .login-button{
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-weight: bolder;
-    padding: 5px 10px;
-    background: white;
-    color: cornflowerblue;
   }
 </style>
