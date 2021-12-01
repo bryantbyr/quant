@@ -1,6 +1,6 @@
 <template>
     <div id="header" class="header">
-      <div class="title">
+      <div class="title" @click="pageIndex">
         智能量化投资系统
       </div>
       <div class="login-button" @click="loginHandle" v-if="accountName === '' || accountName === null">
@@ -11,7 +11,8 @@
           {{accountName}}
         </div>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item command="a" icon="el-icon-user">用户管理</el-dropdown-item>
+          <el-dropdown-item command="a" icon="el-icon-user" v-if="accountName.indexOf('admin') !== -1">用户管理</el-dropdown-item>
+          <el-dropdown-item command="c" icon="el-icon-setting">个人信息</el-dropdown-item>
           <el-dropdown-item command="b" icon="el-icon-switch-button">退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -42,10 +43,19 @@ export default {
         this.userAdmin()
         return
       }
-      this.loginLogout()
+      if (cmd === 'b') {
+        this.loginLogout()
+      }
+      this.userInfo()
     },
     userAdmin () {
       window.location.href = '/#/userAdmin'
+    },
+    userInfo () {
+      window.location.href = '/#/userInfo'
+    },
+    pageIndex (){
+      window.location.href = '/#/index'
     }
   }
 }
@@ -65,6 +75,7 @@ export default {
     font-size: 24px;
     font-weight: bolder;
     left: 3%;
+    cursor: pointer;
   }
   .login-button{
     cursor: pointer;

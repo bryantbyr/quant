@@ -6,6 +6,8 @@ import Index from '../components/index'
 import Login from '../components/login'
 import Signin from '../components/signin'
 import UserAdmin from '../components/userAdmin'
+import UserInfo from '../components/userInfo'
+import UserInfoEdit from '../components/userInfoEdit'
 
 Vue.use(Router)
 
@@ -40,6 +42,16 @@ export default new Router({
       path: '/userAdmin',
       name: 'userAdmin',
       component: UserAdmin
+    },
+    {
+      path: '/userInfo',
+      name: 'userInfo',
+      component: UserInfo
+    },
+    {
+      path: '/userInfoEdit',
+      name: 'userInfoEdit',
+      component: UserInfoEdit
     }
   ]
 })

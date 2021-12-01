@@ -45,6 +45,10 @@
           <el-input v-model="holdNum" size="small"></el-input>
         </div>
       </div>
+      <div class="selection">
+        <el-button type="primary" style="margin-top: 38px;" size="small">开始</el-button>
+        <el-button type="danger" style="margin-top: 38px;" size="small">结束</el-button>
+      </div>
     </div>
     <div id="charts" style="width: 1000px;height: 400px;"></div>
     <el-table

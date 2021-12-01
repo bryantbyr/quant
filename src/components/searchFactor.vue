@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'searchFactor',
+export default {
+  name: 'searchFactor'
 
-  }
+}
 </script>
 
 <style scoped>
