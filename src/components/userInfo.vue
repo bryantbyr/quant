@@ -9,23 +9,23 @@
       </div>
       <div class="hr"></div>
       <div class="user-mail user-info-row">
-        <span class="user-field-tag">邮箱：</span><span class="user-field-content">a12312323@sina.com</span>
+        <span class="user-field-tag">用户名：</span><span class="user-field-content">qiqiqi</span>
       </div>
       <div class="hr"></div>
       <div class="user-address user-info-row">
-        <span class="user-field-tag">地址：</span><span class="user-field-content">a12312323@sina.com</span>
+        <span class="user-field-tag">邮箱：</span><span class="user-field-content">a12312323@sina.com</span>
       </div>
       <div class="hr"></div>
       <div class="user-phone user-info-row">
-        <span class="user-field-tag">手机：</span><span class="user-field-content">a12312323@sina.com</span>
+        <span class="user-field-tag">手机：</span><span class="user-field-content">17801188406</span>
       </div>
       <div class="hr"></div>
       <div class="user-education user-info-row">
-        <span class="user-field-tag">教育经历：</span><span class="user-field-content">a12312323@sina.com</span>
+        <span class="user-field-tag">教育经历：</span><span class="user-field-content">硕士</span>
       </div>
       <div class="hr"></div>
       <div class="user-education user-info-row">
-        <span class="user-field-tag">用户名：</span><span class="user-field-content">a12312323@sina.com</span>
+        <span class="user-field-tag">地址：</span><span class="user-field-content">北京市海淀区西土城路10号</span>
       </div>
     </div>
     <div><el-button type="primary" @click="pageIndex">返回</el-button></div>

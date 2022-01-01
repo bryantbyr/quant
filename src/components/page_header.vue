@@ -54,7 +54,7 @@ export default {
     userInfo () {
       window.location.href = '/#/userInfo'
     },
-    pageIndex (){
+    pageIndex () {
       window.location.href = '/#/index'
     }
   }

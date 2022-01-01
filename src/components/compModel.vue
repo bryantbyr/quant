@@ -1,7 +1,7 @@
 <template>
   <div id="comp-model">
     <div class="params-set">
-      数据起始时间
+      训练集起始时间
       <el-date-picker
         v-model="timeSelect"
         type="daterange"
@@ -79,13 +79,13 @@ export default {
       percentage: 0,
 
       tableData: [{
-        date: '2016-05-02',
+        date: '2022-01-02',
         name: 'AF-TCAN'
       }, {
-        date: '2016-05-04',
+        date: '2021-05-04',
         name: 'Two-Branch'
       }, {
-        date: '2016-05-01',
+        date: '2021-08-01',
         name: 'Linear'
       }]
     }
