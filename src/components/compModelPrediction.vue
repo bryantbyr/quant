@@ -1,5 +1,5 @@
 <template>
-  <div id="comp-back-test">
+  <div id="comp-model-prediction">
     <div id="select-components">
       <div class="selection">
         <div>
@@ -32,25 +32,16 @@
       <!--      调仓频率-->
       <div class="selection">
         <div>
-          调仓频率
+          股票代码
         </div>
         <div class="input-display">
           <el-input v-model="adjustRate" size="small"></el-input>
         </div>
       </div>
-      <!--      持有股票数量-->
-      <div class="selection">
-        <div>
-          持有股票
-        </div>
-        <div class="input-display">
-          <el-input v-model="holdNum" size="small"></el-input>
-        </div>
-      </div>
       <!--      开始按钮-->
       <div class="selection">
         <div class="input-display" style="line-height: 115px;">
-          <el-button type="primary" size="small">开始</el-button>
+          <el-button type="primary" size="small">预测</el-button>
         </div>
       </div>
     </div>
@@ -83,7 +74,7 @@
 <script>
 import * as echarts from 'echarts'
 export default {
-  name: 'compBackTest',
+  name: 'compModelPrediction',
   data () {
     return {
       backTestMethods: [{
@@ -98,7 +89,7 @@ export default {
       }],
       methodSelect: '',
       backTestDate: [],
-      adjustRate: 30,
+      adjustRate: '0000001.SZ',
       holdNum: 8,
 
       charts: undefined,

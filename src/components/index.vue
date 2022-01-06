@@ -29,6 +29,10 @@
                 <i class="el-icon-menu"></i>
                 <span slot="title">模型管理</span>
               </el-menu-item>
+              <el-menu-item index="7">
+                <i class="el-icon-menu"></i>
+                <span slot="title">模型预测</span>
+              </el-menu-item>
               <el-menu-item index="5">
                 <i class="el-icon-menu"></i>
                 <span slot="title">选股回测</span>
@@ -48,6 +52,7 @@
         <CompModel v-if="panelIndex === 4"></CompModel>
         <CompBackTest v-if="panelIndex === 5"></CompBackTest>
         <CompRealTrade v-if="panelIndex === 6"></CompRealTrade>
+        <CompModelPrediction v-if="panelIndex === 7"></CompModelPrediction>
       </div>
     </div>
   </div>
@@ -61,9 +66,10 @@ import CompBackTest from './compBacktest'
 import CompRealTrade from './compRealTrade'
 import CompModel from './compModel'
 import CompNews from './compNews'
+import CompModelPrediction from './compModelPrediction'
 export default {
   name: 'index',
-  components: {CompNews, CompModel, CompRealTrade, CompBackTest, CompStock, CompFactor, PageHeader},
+  components: {CompModelPrediction, CompNews, CompModel, CompRealTrade, CompBackTest, CompStock, CompFactor, PageHeader},
   data () {
     return {
       panelIndex: 1
